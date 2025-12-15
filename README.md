@@ -1,135 +1,38 @@
-# Turborepo starter
+# 👻 Wraith Repo (Turborepo Edition)
 
-This Turborepo starter is maintained by the Turborepo core team.
+> *Where ideas become structure.*
 
-## Using this example
+**Wraith Repo** is an opinionated, high-performance monorepo starter template built on **Turborepo**. It is designed to scale from a simple side project to a complex ecosystem, featuring a pre-configured Next.js web app with a unique "Spectral" aesthetic and battle-hardened error handling.
 
-Run the following command:
+## ✨ Key Features
 
-```sh
-npx create-turbo@latest
-```
+### 🏗️ Monorepo Architecture
+- **Powered by Turborepo:** High-performance build system with remote caching capabilities.
+- **Shared UI Library:** Pre-configured `@repo/ui` package for sharing components across applications.
+- **Shared Configs:** Centralized TypeScript, ESLint, and Tailwind configurations.
 
-## What's inside?
+### 🎨 Spectral Aesthetics (Web App)
+- **Mouse-Follower Glow:** A performance-optimized (60fps) background glow using `useRef` for zero-lag tracking.
+- **Orbital Loading:** Custom double-ring orbital animation for route transitions (`loading.tsx`).
+- **Global Theme System:** A sophisticated semantic theme ("Earthy" Light / "Void" Dark) defined in `apps/web/app/globals.css`.
 
-This Turborepo includes the following packages/apps:
+### 🛡️ The Safety Suite
+The web workspace comes with a complete crash-handling UI so users never see a white screen:
+- **`loading.tsx`:** Instant feedback during data fetches.
+- **`error.tsx` (Spectral Dissonance):** Handles component-level crashes with recovery options.
+- **`global-error.tsx` (Core Failure):** A full-screen system replacement for critical root layout failures.
 
-### Apps and Packages
+## ⚡ Tech Stack
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- **Monorepo Tool:** [Turborepo](https://turbo.build/)
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling:** Tailwind CSS + CSS Variables
+- **Package Manager:** pnpm
+- **Language:** TypeScript
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+## 🚀 Getting Started
 
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build
-yarn dlx turbo build
-pnpm exec turbo build
-```
-
-You can build a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
-
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build --filter=docs
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build --filter=docs
-yarn exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev
-yarn exec turbo dev
-pnpm exec turbo dev
-```
-
-You can develop a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
-
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev --filter=web
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev --filter=web
-yarn exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
-```
-
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo login
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo login
-yarn exec turbo login
-pnpm exec turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo link
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo link
-yarn exec turbo link
-pnpm exec turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/THEHARSHALCHAUDHARI/wraith-repo.git](https://github.com/THEHARSHALCHAUDHARI/wraith-repo.git) my-wraith-app
+cd my-wraith-app

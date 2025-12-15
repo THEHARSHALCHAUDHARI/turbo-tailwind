@@ -1,0 +1,8 @@
+{
+  "name": "@repo/theme",
+  "private": true,
+  "sideEffects": ["**/*.css"],
+  "exports": {
+    "./theme.css": "./theme.css"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "name": "Prakrutik Sparsh",
+  "name": "prakrutik-sparsh",
   "private": true,
   "scripts": {
     "build": "turbo run build",
@@ -9,12 +9,19 @@
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
     "prettier": "^3.7.4",
+    "tailwindcss": "^4.1.18",
     "turbo": "^2.6.3",
     "typescript": "5.9.2"
   },
   "packageManager": "pnpm@9.0.0",
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "lucide-react": "^0.561.0",
+    "next-themes": "^0.4.6"
   }
 }
