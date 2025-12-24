@@ -3,9 +3,17 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
-    "./*": "./src/*.tsx"
+    "./*": "./src/*.tsx",
+    "./postcss.config": "./postcss.config.mjs",
+    "./lib/*": "./src/lib/*.ts",
+    "./hooks/*": [
+      "./src/hooks/*.ts",
+      "./src/hooks/*.tsx"
+    ],
+    "./components/*": "./src/components/*.tsx"
   },
   "scripts": {
+    "ui": "pnpm dlx shadcn@latest",
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
     "check-types": "tsc --noEmit"
@@ -20,7 +28,9 @@
     "typescript": "5.9.2"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.2.4",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "tailwind-merge": "^3.4.0"
   }
 }
