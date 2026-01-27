@@ -14,7 +14,7 @@
     "@repo/ui": "workspace:*",
     "@repo/theme": "workspace:*",
     "@tailwindcss/cli": "^4.1.18",
-    "next": "16.0.10",
+    "next": "16.1.5",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
