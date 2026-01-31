@@ -34,5 +34,5 @@ The web workspace comes with a complete crash-handling UI so users never see a w
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/THEHARSHALCHAUDHARI/wraith-repo.git](https://github.com/THEHARSHALCHAUDHARI/wraith-repo.git) my-wraith-app
-cd my-wraith-app
+git clone https://github.com/THEHARSHALCHAUDHARI/turbo-tailwind.git
+cd turbo-tailwind
